@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>login</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	
+	<style>
+		header {
+			text-align: center;
+		}
+
+		* {
+			padding: 0;
+			margin: 0;
+			border: none;
+		}
+
+		body {
+			font-size: 14px;
+			font-family: "맑은 고딕";
+		}
+
+		.login-wrapper {
+			margin: auto;
+			width: 400px;
+			height: 350px;
+			padding: 40px;
+			box-sizing: border-box;
+		}
+
+		.login-wrapper>h2 {
+			font-size: 24px;
+			color: lightslategray;
+			margin-bottom: 20px;
+		}
+
+		#login-form>input {
+			width: 100%;
+			height: 48px;
+			padding: 0 10px;
+			box-sizing: border-box;
+			margin-bottom: 16px;
+			border-radius: 6px;
+			background-color: rgb(247, 247, 247);
+		}
+
+		#login-form>input[type="submit"] {
+			color: #fff;
+			font-size: 16px;
+			background-color: lightslategray;
+			margin-top: 20px;
+		}
+
+		a {
+			text-align: center;
+			text-decoration: none;
+			color: lightslategray;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1><a href="webproject1.html"><img src="images/3.PNG"></a></h1>
+	</header>
+	<div class="login-wrapper">
+		<h2 id="login-header">Login</h2>
+		<form id="login-form">
+			<input type="text" name="user_id" id="user_id" placeholder="이메일">
+			<input type="password" name="user_pw" id="user_pw" placeholder="비밀번호">
+			<input type="submit" value="Login" id="login-submit">
+			<a href="#" class="inline-link">아이디/비밀번호를 잊으셨나요?</a>
+		</form>
+	</div>
+	<script>
+		$(document).ready(function () {
+			$("#login-form").submit(function (e) {
+				e.preventDefault(); // 폼 제출을 중지
+
+				var userid = $("#user_id").val();
+				var userpw = $("#user_pw").val();
+
+				if (userid === "" || userpw === "") {
+					alert("아이디와 비밀번호를 입력해주세요.");
+				} else {
+					window.location.href = "webproject1.html";
+				}
+			});
+		});
+	</script>
+</body>
+
+</html>

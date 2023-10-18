@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>멍멍왈왈</title>
+   <script src="../jquery/jquery-3.7.1.js"></script>
+   <script src="../jquery/migrate-3.4.0.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+  
+#tm3 { 
+   position:absolute; top:0px; right:0px;  padding:3px 10px 3px 10px; text-align:center; 
+}
+#tm3 .logged_ii { 
+   text-decoration:none; 
+   padding:0 5px 0 5px; 
+}
+#tm3 .logged_iid { 
+   padding:0 5px 0 5px; 
+}
+body{
+   font-family: 'Hi Melody', sans-serif;
+   background-color:rgb(247, 247, 247);
+}
+
+header {
+   text-align:center;
+}
+
+#topMenu {
+   width: 100%;
+   text-align: center; /* 텍스트를 수평으로 가운데 정렬. */
+}
+
+#topMenu ul {
+   display: inline-block;
+   list-style: none;
+   padding: 0;
+}
+
+#topMenu li {
+   display: inline; /* 각 메뉴 항목을 인라인 요소로 설정하여 수평으로 정렬. */
+   margin: 0 20px; /* 메뉴 항목 간격 조정을 위한 마진 추가 */
+}
+
+#topMenu .menuLink {
+   text-decoration: none;
+   color:rgb(240, 128, 128);
+   font-size: 20px;
+   font-weight: bold;
+}
+
+#topMenu .menuLink:hover{
+   color:rgb(250, 220, 220);
+}
+
+#container{
+   text-align:center;
+   overflow:hidden;
+   margin-left:10px;
+   padding:1rem;
+}
+.prod-list {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   padding: 0;
+   list-style: none;
+}
+.prod-list li {
+   width: calc(25% - 10px); /* 25% 너비로 설정하고 간격을 빼기 */
+   margin-right: 10px; /* 각 상품 사이의 간격을 조절 */
+   margin-bottom: 20px; /* 아래쪽 간격을 설정 */
+   text-align: center;
+}
+
+.prod-list img {
+   max-width: 100%;
+   height: auto;
+}
+a{
+   text-decoration: none; color: black;
+}
+footer{
+   clear:both;
+   width:100%;
+   background-color:#e2e2e2;
+   font-size:14px;
+   text-align:center;
+}
+</style>
+</head>
+
+<body>
+   <div id="tm3">
+      <a class="logged_iid"></a>
+      <a href="login.html" class="logged_ii">로그인</a>
+      <a href="#" class="logged_ii">회원가입</a>
+      <a href="#" class="logged_ii">아이디/비밀번호 찾기</a>
+      <a href="#" class="logged_ii">장바구니</a>
+   </div>
+   <header>
+       <h1><a href="webproject1.html"><img src="images/3.PNG"></a></h1>
+   </header>
+   <div>
+      <nav id="topMenu">
+      <ul>
+         <li><a class="menuLink" href="newclothes.html">NEW!</a></li>
+         <li><a class="menuLink" href="clothes.html">옷</a></li>
+         <li><a class="menuLink" href="#" onclick="acc()">악세서리</a></li>
+         <li><a class="menuLink" href="toy1.html">장난감</a></li>
+      </ul>
+      </nav>
+   </div>
+   <div id="container">
+      <h3>옷</h3>
+      <ul class="prod-list">
+         <li>
+            <a href="#"><img src="images/best1.jpg" width="250px;" height="300px;"></a>   
+            <a href="#"><h4>키밍 그린 멜빵</h4></a>
+            <p>39,000원</p>
+         </li>
+         <li>
+            <a href="#"><img src="images/best2.jpg" width="250px;" height="300px;"></a>
+            <a href="#"><h4>베이직 린넨 민소매</h4></a>
+            <p>42,000원</p>
+         </li>
+         <li>
+            <a href="#"><img src="images/best3.jpg" width="250px;" height="300px;"></a>
+            <a href="#"><h4>제인니트 블루</h4></a>
+            <p>29,000원</p>
+         </li>
+         <li>
+            <a href="#"><img src="images/best4.jpg" width="250px;" height="300px;"></a>
+            <a href="#"><h4>밀크 플라워 민소매</h4></a>
+            <p>32,000원</p>
+         </li>
+      </ul>
+   </div>
+
+<footer>
+   <div>
+      <p>고객센터 : 010-0000-0000</p>
+      <p>상담/주문 전화 : 00-0000-0000</p>
+      <p>상담/주문 이메일 : bowwow@naver.com</p>
+      <p>상담 가능 시간 : am 9:00 ~ pm 18:00</p>
+   </div>
+   <div id="cp">        
+      <a href="#">회사소개</a>
+      <a href="#">쇼핑가이드</a>
+      <a href="#">개인정보보호정책</a>
+      <a href="#">이용약관</a>
+   </div>
+</footer>
+<script type="text/javascript">
+	function acc(){
+		alert("악세서리 준비중 T.T");
+	}
+</script>
+</html>
